@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/funcionalidad.js"></script>
+    <link rel="stylesheet" href="../css/estilosCalculadora.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="calculadora-general">
+            <h1>Calculadora</h1>
+            <section>
+                <label for="" id="resultado"></label>
+            </section>
+            <div class="calculadora-numeros">
+                <button id="1" onclick="agregarNum(id)">1</button>
+                <button id="2" onclick="agregarNum(id)">2</button>
+                <button id="3" onclick="agregarNum(id)">3</button>
+                <button id="4" onclick="agregarNum(id)">4</button>
+                <button id="5" onclick="agregarNum(id)">5</button>
+                <button id="6" onclick="agregarNum(id)">6</button>
+                <button id="7" onclick="agregarNum(id)">7</button>
+                <button id="8" onclick="agregarNum(id)">8</button>
+                <button id="9" onclick="agregarOpe(id)">9</button>
+                <button class="col-3" id="0" onclick="agregarNum(id)">0</button>
+            </div>
+            <div class="calculadora-operaciones">
+                <button id="+" onclick="agregarOpe(id)">+</button>
+                <button id="-" onclick="agregarOpe(id)">-</button>
+                <button id="*" onclick="agregarOpe(id)">*</button>
+                <button id="/" onclick="agregarOpe(id)">/</button>
+                <button class="col-2" id="limpiar" onclick="limpiarL()">limpiar</button>
+                
+            </div>
+        </div>
+    </div>
+    <aside></aside>
+    <footer></footer>
+</body>
+
+</html>
