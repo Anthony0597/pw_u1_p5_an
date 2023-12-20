@@ -64,3 +64,6 @@ button:hover{
     background-color: #b2daf5;
 }
 
+table th, td{
+    border-block-start: #000 dotted 3px;
+}

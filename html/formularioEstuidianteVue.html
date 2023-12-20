@@ -5,35 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/estudianteFormulario.css
-    ">
+    <link rel="stylesheet" href="../css/estudianteFormulario.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div>
+        <div id="formulario">
             <header>
                 <h1>Estudiante</h1>
             </header>
             <nav></nav>
             <section>
-                <form class="form" action="https://miapi.com/procesarEstudiante" method="POST">
+                <div class="form" >
                     <h2>Nuevo Estudiante</h2>
-                    <p type="Nombre:"><input type=""></p>
-                    <p type="Apellido:"><input type="text"></p>
-                    <p type="Hobby:"><input type="text"></p>
-                    <p type="G&eacute;nero:"><input type="text"></p>
-                    <p type="Pa&iacute;s:"><input type="text"></p>
+                    <p type="Nombre:"><input type="" v-model="nombre"></p>
+                    <p type="Apellido:"><input type="text"v-model="apellido"></p>
+                    <p type="Hobby:"><input type="text"v-model="hobby"></p>
+                    <p type="G&eacute;nero:"><input type="text"v-model="genero"></p>
+                    <p type="Pa&iacute;s:"><input type="text"v-model="pais"></p>
                     <div class="bot">
-                        <button>GUARDAR</button>
+                        <button @click="agregarEstudiante">GUARDAR</button>
                     </div>
-                </form>
+                </div>
+                <div >
+                    <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Hobby</th>
+                            <th>G&eacute;nero</th>
+                            <th>Pa&iacute;s</th>
+                        </tr>
+
+                        <tr v-for="({nombre,apellido,hobby,genero,pais}) in lista">
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{hobby}}</td>
+                            <td>{{genero}}</td>
+                            <td>{{pais}}</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
             <footer></footer>
         </div>
 
     </div>
-
+    <script src="../js/formulario.js"></script>
 </body>
 
 </html>
